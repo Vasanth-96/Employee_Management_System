@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company</title>
+    <!-- CSS only bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </head>
+  <body background="https://wallpapercave.com/wp/wp2856672.jpg">
+    <div class="container">
+        <h1 style="text-align:center;">Add Employee</h1>
+        <hr>
+        <form action="/add_emp" method="post">
+          <div class="mb-3">
+            {% csrf_token %}
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="first_name" id="first_name" value="{{first_name}}" >
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="last_name" id="last_name" value="{{last_name}}" >
+            <label for="dept" class="form-label">Depatment</label>
+            <input type="number" class="form-control" name="dept" id="dept" value="{{dept}}" >
+            <label for="role" class="form-label">Role</label>
+            <input type="number" class="form-control" name="role" id="role" value="{{role}}" >
+            <label for="salary" class="form-label">Salary</label>
+            <input type="number" class="form-control" name="salary" id="salary" value="{{salary}}" >
+            <label for="bonus" class="form-label">Bonus</label>
+            <input type="number" class="form-control" name="bonus" id="bonus" value="{{bonus}}" >
+            <label for="phone" class="form-label">Phone</label>
+            <input type="number" class="form-control" name="phone" id="phone" value="{{phone}}" >
+          </div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+
+
+    </div>
+  </body>
+</html>
